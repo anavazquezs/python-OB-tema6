@@ -1,13 +1,18 @@
 class Vehiculo:
-    color = "Rojo"
-    ruedas = 4
-    puertas = 3
+    def __init__(self, color, ruedas, puertas):
+        self.color = color
+        self.ruedas = ruedas
+        self.puertas = puertas
 
 class Coche(Vehiculo):
-    velocidad = 180
-    cilindrada = 4
+    def __init__(self, color, ruedas, puertas, velocidad, cilindrada):
+        self.color = color
+        self.ruedas = ruedas
+        self.puertas = puertas
+        self.velocidad = velocidad
+        self.cilindrada = cilindrada
     
 
-c1 = Coche()
+c1 = Coche("Rojo", 4, 3, 100, 4)
 
 print("El color del coche es: ", c1.color, ", tiene ", c1.puertas, " puertas y la cilindrada es: ", c1.cilindrada)
